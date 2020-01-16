@@ -55,12 +55,12 @@ namespace LengthDemo
             return len;
         }
 
-        public double getVal()
+        public double GetVal()
         {
             return value;
         }
 
-        public string getUinnt()
+        public string GetUinnt()
         {
             return unit;
         }
