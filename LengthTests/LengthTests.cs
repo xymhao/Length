@@ -34,7 +34,7 @@ namespace LengthTests
         }
 
         [TestMethod]
-        public void Should_1_foot_equals_12_inches()
+        public void Should_1_Foot_Equals_12_Inches()
         {
             Length result = new Length(1, "f").As("inch");
 
@@ -43,7 +43,7 @@ namespace LengthTests
         }
 
         [TestMethod]
-        public void Should_3_foot_equals_1_yard()
+        public void Should_3_Foot_Equals_1_yard()
         {
             Length result = new Length(3, "f").As("yard");
 
@@ -52,7 +52,7 @@ namespace LengthTests
         }
 
         [TestMethod]
-        public void Should_1_yard_equals_3_feet()
+        public void Should_1_yard_Equals_3_feet()
         {
             Length result = new Length(1, "yard").As("f");
 
@@ -61,7 +61,7 @@ namespace LengthTests
         }
 
         [TestMethod]
-        public void Should_1_yard_equals_36_inches()
+        public void Should_1_yard_Equals_36_Inches()
         {
             Length result = new Length(1, "yard").As("inch");
 
@@ -70,7 +70,7 @@ namespace LengthTests
         }
 
         [TestMethod]
-        public void Should_2_yards_equals_72_inches()
+        public void Should_2_yards_Equals_72_Inches()
         {
             Length result = new Length(2, "yard").As("inch");
 
@@ -79,7 +79,7 @@ namespace LengthTests
         }
 
         [TestMethod]
-        public void Should_12_inches_equals_1_foot()
+        public void Should_12_Inches_Equals_1_Foot()
         {
             Length result = new Length(12, "inch").As("f");
 
@@ -88,7 +88,7 @@ namespace LengthTests
         }
 
         [TestMethod]
-        public void Should_36_inches_equals_1_Yard()
+        public void Should_36_Inches_Equals_1_Yard()
         {
             Length result = new Length(36, "inch").As("yard");
 
