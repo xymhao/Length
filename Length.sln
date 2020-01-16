@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Length", "Length\Length.csproj", "{B7328223-26B3-40DF-B141-B6815239F2CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LengthDemo", "Length\LengthDemo.csproj", "{B7328223-26B3-40DF-B141-B6815239F2CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LengthTests", "LengthTests\LengthTests.csproj", "{563CD76D-3CF4-470B-B2C5-BF7EDB7C3161}"
 EndProject
