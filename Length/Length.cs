@@ -7,10 +7,10 @@ namespace LengthDemo
         private readonly double value;
         private readonly string unit;
 
-        public Length(double val, string uinnt)
+        public Length(double val, string uintVal)
         {
             value = val;
-            unit = uinnt;
+            unit = uintVal;
         }
 
         public Length As(string u)
@@ -60,7 +60,7 @@ namespace LengthDemo
             return value;
         }
 
-        public string GetUinnt()
+        public string GetUint()
         {
             return unit;
         }

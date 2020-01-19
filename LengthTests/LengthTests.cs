@@ -12,7 +12,7 @@ namespace LengthTests
             Length result = new Length(1, "inch").As("inch");
 
             Assert.AreEqual(result.GetVal(), (1.0));
-            Assert.AreEqual(result.GetUinnt(), ("inch"));
+            Assert.AreEqual(result.GetUint(), ("inch"));
         }
 
         [TestMethod]
@@ -21,7 +21,7 @@ namespace LengthTests
             Length result = new Length(2, "f").As("f");
 
             Assert.AreEqual(result.GetVal(), (2.0));
-            Assert.AreEqual(result.GetUinnt(), ("f"));
+            Assert.AreEqual(result.GetUint(), ("f"));
         }
 
         [TestMethod]
@@ -30,7 +30,7 @@ namespace LengthTests
             Length result = new Length(1, "yard").As("yard");
 
             Assert.AreEqual(result.GetVal(), (1.0));
-            Assert.AreEqual(result.GetUinnt(), ("yard"));
+            Assert.AreEqual(result.GetUint(), ("yard"));
         }
 
         [TestMethod]
@@ -39,7 +39,7 @@ namespace LengthTests
             Length result = new Length(1, "f").As("inch");
 
             Assert.AreEqual(result.GetVal(), (12.0));
-            Assert.AreEqual(result.GetUinnt(), ("inch"));
+            Assert.AreEqual(result.GetUint(), ("inch"));
         }
 
         [TestMethod]
@@ -48,7 +48,7 @@ namespace LengthTests
             Length result = new Length(3, "f").As("yard");
 
             Assert.AreEqual(result.GetVal(), (1.0));
-            Assert.AreEqual(result.GetUinnt(), ("yard"));
+            Assert.AreEqual(result.GetUint(), ("yard"));
         }
 
         [TestMethod]
@@ -57,7 +57,7 @@ namespace LengthTests
             Length result = new Length(1, "yard").As("f");
 
             Assert.AreEqual(result.GetVal(), (3.0));
-            Assert.AreEqual(result.GetUinnt(), ("f"));
+            Assert.AreEqual(result.GetUint(), ("f"));
         }
 
         [TestMethod]
@@ -66,7 +66,7 @@ namespace LengthTests
             Length result = new Length(1, "yard").As("inch");
 
             Assert.AreEqual(result.GetVal(), (36.0));
-            Assert.AreEqual(result.GetUinnt(), ("inch"));
+            Assert.AreEqual(result.GetUint(), ("inch"));
         }
 
         [TestMethod]
@@ -75,7 +75,7 @@ namespace LengthTests
             Length result = new Length(2, "yard").As("inch");
 
             Assert.AreEqual(result.GetVal(), (72.0));
-            Assert.AreEqual(result.GetUinnt(), ("inch"));
+            Assert.AreEqual(result.GetUint(), ("inch"));
         }
 
         [TestMethod]
@@ -84,7 +84,7 @@ namespace LengthTests
             Length result = new Length(12, "inch").As("f");
 
             Assert.AreEqual(result.GetVal(), (1.0));
-            Assert.AreEqual(result.GetUinnt(), ("f"));
+            Assert.AreEqual(result.GetUint(), ("f"));
         }
 
         [TestMethod]
@@ -93,7 +93,7 @@ namespace LengthTests
             Length result = new Length(36, "inch").As("yard");
 
             Assert.AreEqual(result.GetVal(), (1.0));
-            Assert.AreEqual(result.GetUinnt(), ("yard"));
+            Assert.AreEqual(result.GetUint(), ("yard"));
         }
 
         [TestMethod]
@@ -102,7 +102,7 @@ namespace LengthTests
             Length result = new Length(18, "inch").As("yard");
 
             Assert.AreEqual(result.GetVal(), (0.5));
-            Assert.AreEqual(result.GetUinnt(), ("yard"));
+            Assert.AreEqual(result.GetUint(), ("yard"));
         }
     }
 }
