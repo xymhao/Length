@@ -4,74 +4,51 @@ namespace LengthDemo
 {
     public class Length
     {
-        private const string Feet = "feet";
-        private const string Yard = "yard";
-        private const string Inch = "inch";
         private readonly double value;
-        private readonly string unit;
+        private readonly Unit unit;
 
-        public Length(double lengthValue, string uintValue)
+        public Length(double lengthValue, Unit toUnitEnum)
         {
             value = lengthValue;
-            unit = uintValue;
+            unit = toUnitEnum;
         }
 
-
-        public Length As(string targetUnit)
-        {
-            if (targetUnit.Equals(Unit.Inch.ToString(), StringComparison.CurrentCultureIgnoreCase))
-            {
-                return As(targetUnit, Unit.Inch);
-            }
-
-            if (targetUnit.Equals(Unit.Feet.ToString(), StringComparison.CurrentCultureIgnoreCase))
-            {
-                return As(targetUnit, Unit.Feet);
-            }
-
-            if (targetUnit.Equals(Unit.Yard.ToString(), StringComparison.CurrentCultureIgnoreCase))
-            {
-                return As(targetUnit, Unit.Yard);
-            }
-            return As(targetUnit, null);
-        }
-
-        public Length As(string toUnit, Unit? toUnitEnum)
+        public Length As(Unit targetUnit)
         {
             Length length = this;
-            if (unit.Equals(Feet))
+            if (unit.Equals(Unit.Feet))
             {
-                if (toUnitEnum.Equals(Unit.Yard))
+                if (targetUnit.Equals(Unit.Yard))
                 {
-                    length = new Length(value / 3, toUnit);
+                    length = new Length(value / 3, targetUnit);
                 }
-                else if (toUnitEnum.Equals(Unit.Inch))
+                else if (targetUnit.Equals(Unit.Inch))
                 {
-                    length = new Length(value * 12, toUnit);
+                    length = new Length(value * 12, targetUnit);
                 }
             }
 
-            if (unit.Equals(Yard))
+            if (unit.Equals(Unit.Yard))
             {
-                if (toUnitEnum.Equals(Unit.Inch))
+                if (targetUnit.Equals(Unit.Inch))
                 {
-                    length = new Length(value * 36, toUnit);
+                    length = new Length(value * 36, targetUnit);
                 }
-                else if (toUnitEnum.Equals(Unit.Feet))
+                else if (targetUnit.Equals(Unit.Feet))
                 {
-                    length = new Length(value * 3, toUnit);
+                    length = new Length(value * 3, targetUnit);
                 }
             }
 
-            if (unit.Equals(Inch))
+            if (unit.Equals(Unit.Inch))
             {
-                if (toUnitEnum.Equals(Unit.Feet))
+                if (targetUnit.Equals(Unit.Feet))
                 {
-                    length = new Length(value / 12, toUnit);
+                    length = new Length(value / 12, targetUnit);
                 }
-                else if (toUnitEnum.Equals(Unit.Yard))
+                else if (targetUnit.Equals(Unit.Yard))
                 {
-                    length = new Length(value / 36, toUnit);
+                    length = new Length(value / 36, targetUnit);
                 }
             }
 
@@ -83,16 +60,9 @@ namespace LengthDemo
             return value;
         }
 
-        public string GetUint()
+        public Enum GetUint()
         {
             return unit;
         }
-    }
-
-    public enum Unit
-    {
-        Inch = 1,
-        Feet =12,
-        Yard = 36
     }
 }
