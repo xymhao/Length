@@ -4,51 +4,54 @@ namespace LengthDemo
 {
     public class Length
     {
+        private const string Feet = "feet";
+        private const string Yard = "yard";
+        private const string Inch = "inch";
         private readonly double value;
         private readonly string unit;
 
-        public Length(double val, string uinnt)
+        public Length(double lengthValue, string uintValue)
         {
-            value = val;
-            unit = uinnt;
+            value = lengthValue;
+            unit = uintValue;
         }
 
-        public Length As(string u)
+        public Length As(string toUnit)
         {
             Length len = this;
-            if (unit.Equals("f"))
+            if (unit.Equals(Feet))
             {
-                if (u.Equals("yard"))
+                if (toUnit.Equals(Yard))
                 {
-                    len = new Length(value / 3, u);
+                    len = new Length(value / 3, toUnit);
                 }
-                else if (u.Equals("inch"))
+                else if (toUnit.Equals(Inch))
                 {
-                    len = new Length(value * 12, u);
+                    len = new Length(value * 12, toUnit);
                 }
             }
 
-            if (unit.Equals("yard"))
+            if (unit.Equals(Yard))
             {
-                if (u.Equals("inch"))
+                if (toUnit.Equals(Inch))
                 {
-                    len = new Length(value * 36, u);
+                    len = new Length(value * 36, toUnit);
                 }
-                else if (u.Equals("f"))
+                else if (toUnit.Equals(Feet))
                 {
-                    len = new Length(value * 3, u);
+                    len = new Length(value * 3, toUnit);
                 }
             }
 
-            if (unit.Equals("inch"))
+            if (unit.Equals(Inch))
             {
-                if (u.Equals("f"))
+                if (toUnit.Equals(Feet))
                 {
-                    len = new Length(value / 12, u);
+                    len = new Length(value / 12, toUnit);
                 }
-                else if (u.Equals("yard"))
+                else if (toUnit.Equals(Yard))
                 {
-                    len = new Length(value / 36, u);
+                    len = new Length(value / 36, toUnit);
                 }
             }
 
@@ -60,7 +63,7 @@ namespace LengthDemo
             return value;
         }
 
-        public string GetUinnt()
+        public string GetUint()
         {
             return unit;
         }
